@@ -1,0 +1,8 @@
+#!/bin/sh
+
+#sv start socklog-unix || exit 1
+
+export GUNICORN_OPTS=[--preload]
+
+exec 2>&1
+exec docker-registry
